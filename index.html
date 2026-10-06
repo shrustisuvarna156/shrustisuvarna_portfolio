@@ -72,7 +72,6 @@
     .about-detail-item p { color: var(--text); font-size: 0.9rem; margin: 0; }
 
     /* HOW I THINK */
-    #howithink { }
     .thinking-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
     .thinking-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s; }
     .thinking-card.visible { opacity: 1; transform: translateY(0); }
@@ -99,7 +98,6 @@
     .timeline-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent2); font-size: 0.8rem; }
 
     /* PROJECTS */
-    #projects { }
     .projects-filter { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .filter-btn { padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 0.78rem; cursor: pointer; transition: all 0.2s; font-family: var(--sans); }
     .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(200,245,100,0.06); }
@@ -111,6 +109,7 @@
     .project-card.hidden { display: none; }
     .project-domain { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent2); font-weight: 600; }
     .project-title { font-family: var(--serif); font-size: 1.15rem; line-height: 1.3; }
+    .project-team { font-size: 0.75rem; color: var(--muted); margin-top: -0.5rem; }
     .project-desc { color: var(--muted); font-size: 0.86rem; line-height: 1.5; font-weight: 300; }
     .project-divider { border: none; border-top: 1px solid var(--border); }
     .project-insight { background: rgba(200,245,100,0.05); border: 1px solid rgba(200,245,100,0.15); border-radius: 4px; padding: 0.85rem 1rem; }
@@ -133,7 +132,6 @@
     .skill-pill:hover { background: rgba(200,245,100,0.08); border-color: rgba(200,245,100,0.3); color: var(--accent); }
 
     /* CERTIFICATIONS */
-    #certifications { }
     .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
     .cert-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.8rem; display: flex; align-items: flex-start; gap: 1.2rem; transition: all 0.2s; }
     .cert-card:hover { border-color: rgba(200,245,100,0.25); transform: translateY(-3px); }
@@ -190,7 +188,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="overlay" id="overlay"></div>
@@ -208,14 +206,14 @@
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-content">
-    <div class="hero-tag">📍 Rochester, NY &nbsp;·&nbsp; MS Business Analytics, RIT &nbsp;·&nbsp; F-1 OPT/CPT Eligible</div>
+    <div class="hero-tag">📍 Rochester, NY &nbsp;·&nbsp; MS Business Analytics, RIT (Dec 2026) &nbsp;·&nbsp; F-1 OPT Eligible</div>
     <h1 class="hero-name">Shrusti<br/><em>Suvarna</em></h1>
-    <p class="hero-tagline">Turning complex data into decisions that matter — through machine learning, BI dashboards, and analytics that bridge technical depth with business impact.</p>
+    <p class="hero-tagline">Turning complex data into decisions that matter — through data pipelines, BI dashboards, and analytics that bridge technical depth with business impact.</p>
     <div class="hero-stats">
       <div class="stat-item"><div class="stat-number">3.67</div><div class="stat-label">GPA at RIT</div></div>
-      <div class="stat-item"><div class="stat-number">22+</div><div class="stat-label">Projects</div></div>
+      <div class="stat-item"><div class="stat-number">22</div><div class="stat-label">Analytics Projects</div></div>
+      <div class="stat-item"><div class="stat-number">11,000+</div><div class="stat-label">Reviews in Research Pipeline</div></div>
       <div class="stat-item"><div class="stat-number">40%</div><div class="stat-label">Faster Reporting</div></div>
-      <div class="stat-item"><div class="stat-number">71K+</div><div class="stat-label">Records Modeled</div></div>
     </div>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -230,15 +228,15 @@
     <div class="about-text">
       <div class="section-label">About Me</div>
       <h2 class="section-title">Analytics Professional with an Engineering Foundation</h2>
-      <p>I started as an Electronics & Telecom engineer, then discovered my real passion: making sense of data and turning it into decisions. That engineering mindset — systematic, rigorous, detail-oriented — now powers everything I build as an analyst.</p>
-      <p>At RIT, I've worked across healthcare, finance, marketing, and NLP — always asking the same question: what does this data actually mean for the business? Whether predicting hospital utilization, modeling credit risk, or segmenting customers, I aim to deliver insights that are technically sound and genuinely actionable.</p>
-      <p>As a Research Assistant at the Saunders College of Business, I've refined my ability to communicate findings to audiences who don't live in spreadsheets — a skill I consider just as important as the modeling itself.</p>
+      <p>I started as an Electronics &amp; Telecom engineer and a software engineer building stock market data pipelines, then moved into business analytics to focus on turning data into decisions. That engineering mindset — systematic, rigorous, detail-oriented — shapes how I approach every analysis.</p>
+      <p>At RIT, I've worked across healthcare, finance, marketing, and NLP, always asking the same question: what does this data actually mean for the business?</p>
+      <p>Today I work in two roles at RIT. As a SharePoint Site Developer at the Office of Educational Effectiveness &amp; Assessment, I automate workflows and organize reporting for an assessment system serving ~3,000 users. As a Student Research Scholar at the Saunders College of Business, I build Python data pipelines and design a difference-in-differences study on how local policy affects employee sentiment. Both roles have sharpened my ability to explain findings to people who don't live in spreadsheets.</p>
     </div>
     <div class="about-details">
-      <div class="about-detail-item"><h4>Currently</h4><p>MS Business Analytics @ RIT — graduating May 2026</p></div>
-      <div class="about-detail-item"><h4>Background</h4><p>B.E. Electronics & Telecom, University of Mumbai · Software Engineer at OneTure Technologies</p></div>
-      <div class="about-detail-item"><h4>Focus Areas</h4><p>Predictive Modeling · Business Intelligence · NLP · Financial Analytics · Marketing Analytics</p></div>
-      <div class="about-detail-item"><h4>Work Authorization</h4><p>F-1 — OPT / CPT Eligible</p></div>
+      <div class="about-detail-item"><h4>Currently</h4><p>MS Business Analytics @ RIT, graduating December 2026 · SharePoint Site Developer (EEA) · Student Research Scholar (Saunders)</p></div>
+      <div class="about-detail-item"><h4>Background</h4><p>B.E. Electronics &amp; Telecom, University of Mumbai · Software Engineer at OneTure Technologies</p></div>
+      <div class="about-detail-item"><h4>Focus Areas</h4><p>Data Analysis · Business Intelligence · Workflow Automation · Predictive Modeling · NLP</p></div>
+      <div class="about-detail-item"><h4>Work Authorization</h4><p>F-1 — OPT Eligible</p></div>
     </div>
   </div>
 </section>
@@ -290,42 +288,68 @@
 <section id="experience">
   <div class="section-label">Career</div>
   <h2 class="section-title">Work Experience</h2>
-  <p class="section-subtitle">From data pipelines to executive dashboards — building solutions that scale.</p>
+  <p class="section-subtitle">From data pipelines to workflow automation — building solutions people actually use.</p>
   <div class="timeline">
+
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Aug 2025 – Present</div>
+      <div class="timeline-date">Jul 2026 – Present</div>
+      <div class="timeline-role">SharePoint Site Developer</div>
+      <div class="timeline-company">Office of Educational Effectiveness &amp; Assessment, RIT · Rochester, NY</div>
+      <ul class="timeline-list">
+        <li>Automated status-based email notifications for an enterprise assessment system serving ~3,000 users by building Power Automate workflows with nested conditional logic and dynamic recipient resolution</li>
+        <li>Improved document searchability and reporting across 10+ administrative departments by migrating libraries from Google Drive to SharePoint and restructuring nested folders into metadata-driven organization</li>
+        <li>Standardized metadata tagging (Report Year, Academic Year, College, Degree Level) across hundreds of archived documents and administered role-based SharePoint permissions for multiple college-specific access groups</li>
+        <li>Gave stakeholders visibility into report submission progress via filtered SharePoint list views and status dashboards; evaluated Power Apps forms, identified platform constraints, and recommended a reliable alternative</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">May 2026 – Present</div>
+      <div class="timeline-role">Student Research Scholar</div>
+      <div class="timeline-company">Saunders College of Business, RIT · Rochester, NY</div>
+      <ul class="timeline-list">
+        <li>Consolidated 11,000+ Glassdoor reviews across 19 hospitality companies for a causal policy study by building an end-to-end Python pipeline (Firefox automation, BFF/GraphQL replay, deduplication)</li>
+        <li>Restored data collection after an upstream API change by reverse-engineering a broken Glassdoor pagination endpoint through network-traffic inspection and replication of authenticated BFF requests</li>
+        <li>Designed a staggered difference-in-differences framework in pandas to estimate the effect of Los Angeles, Chicago, and NYC single-use plastics ordinances on employee sentiment, constructing city-specific treatment timing and event-time indicators</li>
+        <li>Informed sample construction and model specification under a low (~1.7%) treatment share by running viability diagnostics: brand × location × pre/post cell counts, missingness audits, and time-trend plots</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Aug 2025 – Apr 2026</div>
       <div class="timeline-role">Research Assistant</div>
       <div class="timeline-company">Saunders College of Business, RIT · Rochester, NY</div>
       <ul class="timeline-list">
-        <li>Organized and presented data from 250+ research sources using structured Excel repositories, improving retrieval efficiency and process transparency</li>
-        <li>Streamlined cross-functional reporting workflows using Python and Power BI, synthesizing inputs into stakeholder-ready summaries</li>
-        <li>Identified and recommended data workflow improvements that reduced manual tracking overhead and increased operational efficiency</li>
+        <li>Engineered Excel repositories for 250+ research sources with index/match and pivot logic to speed faculty data retrieval</li>
+        <li>Partnered with faculty to translate large datasets into executive-ready planning frameworks for data-informed decisions</li>
       </ul>
     </div>
+
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Feb 2023 – Aug 2023</div>
       <div class="timeline-role">Software Engineer</div>
       <div class="timeline-company">OneTure Technologies · Mumbai, India</div>
       <ul class="timeline-list">
-        <li>Designed and implemented a stock market analytics data pipeline using Python, Selenium, and Yahoo Finance APIs — automating data collection, cleaning, and structured database management</li>
-        <li>Extracted financial data from Bombay Stock Exchange, applying statistical analysis to identify key trading patterns</li>
-        <li>Automated end-to-end workflows integrating AWS S3, EC2, and Lambda for scalable data collection and processing</li>
+        <li>Architected a stock market data pipeline using Python, Selenium, and the Yahoo Finance API, automated on AWS (S3, EC2, Lambda) for continuous data collection and processing</li>
+        <li>Analyzed Bombay Stock Exchange trading data with SQL and Python to surface market patterns that informed portfolio investment decisions</li>
       </ul>
     </div>
+
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">May 2021 – Nov 2021</div>
       <div class="timeline-role">Data Analyst Intern</div>
       <div class="timeline-company">The Sparks Foundation · Mumbai, India</div>
       <ul class="timeline-list">
-        <li>Built interactive Tableau dashboards tracking loan default rates, customer acquisition costs, and branch KPIs — accelerating executive reporting by 40%</li>
-        <li>Applied regression modeling to financial datasets improving forecasting accuracy by 15%</li>
-        <li>Leveraged Google Analytics to identify drop-off trends, contributing to a 12% increase in online conversion rates</li>
-        <li>Reduced data inconsistencies by 25% through advanced Excel formulas, ensuring compliance with audit standards</li>
+        <li>Cut reporting time by 40% by building Tableau and Excel KPI dashboards tracking loan defaults, customer acquisition cost, and branch performance</li>
+        <li>Drove a 12% lift in online conversion by diagnosing funnel drop-offs in Google Analytics and delivering targeted recommendations</li>
       </ul>
     </div>
+
   </div>
 </section>
 
@@ -340,7 +364,7 @@
     <button class="filter-btn" data-filter="finance">Finance</button>
     <button class="filter-btn" data-filter="marketing">Marketing</button>
     <button class="filter-btn" data-filter="nlp">NLP</button>
-    <button class="filter-btn" data-filter="bi">BI & Tableau</button>
+    <button class="filter-btn" data-filter="bi">BI &amp; Tableau</button>
     <button class="filter-btn" data-filter="database">Database</button>
   </div>
   <div class="projects-grid">
@@ -348,111 +372,130 @@
     <div class="project-card" data-category="healthcare">
       <div class="project-domain">Healthcare · Predictive Modeling</div>
       <div class="project-title">Hospital Utilization Predictive Analysis</div>
-      <div class="project-desc">End-to-end predictive model on 71,435 health plan members across 4 phases: EDA, data preparation, NLP, and predictive modeling.</div>
+      <div class="project-team">Team project (4 members) · Heritage Health Prize data</div>
+      <div class="project-desc">End-to-end analysis of 71,435 health plan members over 3 years across four phases: EDA, data preparation, NLP, and predictive modeling of Y3 hospitalization from Y1–Y2 behavioral and clinical features.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Just 4.3% of members drive disproportionate hospital costs — and Y2 High Utilizers had a 2.5× higher Y3 hospitalization rate. Early identification enables proactive care management before costs spike.</p>
+        <p>Just 4.3% of members drive disproportionate hospital costs, and Y2 high utilizers had a 2.5× higher Y3 hospitalization rate. With 85% of members at zero hospital days, early identification of the few high-risk members is where proactive care management pays off.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Used AnyHosp_Y2 as a binary flag rather than exact utilization counts — sacrificing precision for significant gains in model interpretability and prediction stability.</p>
+        <p>Kept the target strictly in the future (Y1–Y2 features predicting Y3), so the model mirrors how a care team would actually use it: flagging members before the costly year, not explaining it afterward.</p>
       </div>
-      <div class="project-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">OLS Regression</span><span class="tag">NLP</span><span class="tag">Feature Engineering</span></div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">XGBoost</span><span class="tag">OLS Regression</span><span class="tag">Feature Engineering</span></div>
     </div>
 
     <div class="project-card" data-category="finance">
       <div class="project-domain">FinTech · Credit Risk</div>
       <div class="project-title">AmEx Credit Card Default Prediction</div>
-      <div class="project-desc">End-to-end credit default prediction on the Kaggle AmEx dataset — comparing Logistic Regression vs. XGBoost with full model explainability analysis.</div>
+      <div class="project-desc">End-to-end credit default prediction on the Kaggle American Express dataset, comparing Logistic Regression and XGBoost with feature selection, model explainability analysis, and an executive summary presentation.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>XGBoost outperformed on raw accuracy, but Logistic Regression offered far more interpretable coefficients — which matters more in regulated financial contexts where explainability is required.</p>
+        <p>Predictive default models let lenders tighten underwriting on the highest-risk applicants, reducing charge-offs without blanket credit tightening for everyone else.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Chose to present both models rather than just the highest-performing one — because the right model depends on whether the business prioritizes prediction accuracy or regulatory explainability.</p>
+        <p>Paired the model comparison with explainability analysis instead of reporting a single score, because in lending the right model depends on whether the business needs prediction power or decisions it can explain.</p>
       </div>
-      <div class="project-tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Logistic Regression</span><span class="tag">Scikit-learn</span></div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Logistic Regression</span><span class="tag">Model Explainability</span></div>
     </div>
 
     <div class="project-card" data-category="nlp finance">
       <div class="project-domain">NLP · Finance · Risk Analytics</div>
       <div class="project-title">Quantifying Corporate Risk via Text Analytics</div>
-      <div class="project-desc">Scraped 10-K Item 1A filings from 10 S&P 500 firms (2015–2024). Tokenized 231,288 tokens; applied LDA for risk theme discovery and linked uncertainty to stock volatility.</div>
+      <div class="project-desc">Scraped 10-K Item 1A (Risk Factors) filings for 10 S&amp;P 500 firms (2015–2024) via SEC EDGAR, tokenized 231,288 tokens across 50 firm-year documents, applied LDA (K=6), and regressed textual uncertainty on next-year stock volatility.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Higher textual uncertainty in annual filings was positively linked to next-year stock volatility — how companies talk about risk is itself a measurable signal for investors.</p>
+        <p>LDA surfaced six risk themes, from regulatory to energy/commodity. Uncertainty language pointed toward higher next-year volatility (β = 2.49), but the effect was not statistically significant (p = 0.464, R² = 0.014), so text-based risk screening works best as a complement to traditional financial metrics, not a replacement.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Used the Loughran-McDonald finance-specific lexicon over a general sentiment dictionary — sacrificing broader coverage for domain accuracy, since general lexicons misclassify many finance terms.</p>
+        <p>Used the Loughran-McDonald finance-specific lexicon over a general sentiment dictionary, trading broader coverage for domain accuracy, since general lexicons misread many routine finance terms as negative.</p>
       </div>
       <div class="project-tags"><span class="tag">R</span><span class="tag">LDA</span><span class="tag">Loughran-McDonald</span><span class="tag">SEC EDGAR API</span><span class="tag">OLS</span></div>
     </div>
 
     <div class="project-card" data-category="marketing">
       <div class="project-domain">Marketing Analytics · Segmentation</div>
-      <div class="project-title">Customer Segmentation & Market Basket Analysis</div>
-      <div class="project-desc">Segmented 278 customers into 3 behavioral clusters and mined 9,530 café transactions generating 222 association rules.</div>
+      <div class="project-title">Customer Segmentation — Cluster Analysis</div>
+      <div class="project-desc">Segmented 278 online pickup customers into 3 distinct clusters using hierarchical and k-means clustering on age, income, spending score, and gender.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Top rule: {Espresso + Tartine} → Coffee at 92% confidence — directly informing a bundling recommendation. The high-frequency, lower-spend cluster was the best target for upsell campaigns.</p>
+        <p>High income did not mean high spending: the two showed up as distinct segments. That split points to two different plays — loyalty programs for high spenders and upsell campaigns for high-income, low-spend customers.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Chose k=3 clusters over a statistically optimal k=5 — three segments produced clearer, more actionable business personas. More clusters would have obscured the marketing recommendations.</p>
+        <p>Segmented on spending behavior alongside demographics rather than income alone, because a purely demographic split would have merged two groups that need very different marketing.</p>
       </div>
-      <div class="project-tags"><span class="tag">R</span><span class="tag">k-means</span><span class="tag">Hierarchical Clustering</span><span class="tag">Apriori</span></div>
+      <div class="project-tags"><span class="tag">R</span><span class="tag">k-means</span><span class="tag">Hierarchical Clustering</span></div>
+    </div>
+
+    <div class="project-card" data-category="marketing">
+      <div class="project-domain">Retail Analytics · Association Rules</div>
+      <div class="project-title">Market Basket Analysis — Café Le Petit</div>
+      <div class="project-desc">Mined 9,530 café transactions across 75 menu items with the Apriori algorithm, generating 222 association rules for cross-sell and upsell strategy.</div>
+      <hr class="project-divider"/>
+      <div class="project-insight">
+        <div class="project-insight-label">🎯 Key Insight</div>
+        <p>Coffee anchored 47% of transactions, and the top rule — {Espresso + Tartine} → Coffee — held at 92% confidence. Beverage-led bundles and checkout upsell prompts based on basket contents can lift average order value.</p>
+      </div>
+      <div class="project-tradeoff">
+        <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
+        <p>Translated 222 rules into a couple of concrete levers (bundles and checkout prompts) rather than handing over the full rule list, because a café manager acts on a short recommendation, not a rules table.</p>
+      </div>
+      <div class="project-tags"><span class="tag">R</span><span class="tag">Apriori</span><span class="tag">arules</span><span class="tag">arulesViz</span></div>
     </div>
 
     <div class="project-card" data-category="bi healthcare">
       <div class="project-domain">Business Intelligence · Healthcare</div>
-      <div class="project-title">Healthcare Analytics Dashboard</div>
-      <div class="project-desc">Analyzed 30,000+ U.S. ZIP-code cancer records. Built interactive Tableau dashboards with drilldowns for non-technical stakeholders.</div>
+      <div class="project-title">Cancer Incidence &amp; Geographic Risk Dashboard</div>
+      <div class="project-desc">Interactive Tableau dashboards for Rochester Regional Health exploring 30,000+ U.S. ZIP-code cancer records, identifying highest-risk regions and New York State-specific health priorities.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Certain ZIP clusters showed cancer incidence 2–3× the national average, often correlating with lower median income — pointing to resource allocation gaps executives could act on directly.</p>
+        <p>Visualizing ZIP-level cancer data lets a health system spot regional hotspots and underserved markets, and prioritize resource allocation and outreach by regional burden.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Prioritized geographic drilldowns over time-series trends — the audience needed to know "where" before "when," so spatial storytelling drove the dashboard design.</p>
+        <p>Designed for clinicians and administrators rather than statisticians: drilldowns by region, demographic, and cancer type replace dense statistical output, so non-technical stakeholders can explore the data themselves.</p>
       </div>
-      <div class="project-tags"><span class="tag">Tableau</span><span class="tag">SQL</span><span class="tag">Excel</span></div>
+      <div class="project-tags"><span class="tag">Tableau</span><span class="tag">Dashboards</span><span class="tag">Drilldowns</span></div>
     </div>
 
     <div class="project-card" data-category="bi">
       <div class="project-domain">Education Analytics · BI</div>
-      <div class="project-title">World University Rankings — Operational Analytics</div>
-      <div class="project-desc">Synthesized 2,343 universities across 12 metrics to identify the dominant drivers of global university rankings.</div>
+      <div class="project-title">World University Rankings Analysis</div>
+      <div class="project-team">Team project (4 members)</div>
+      <div class="project-desc">Analyzed 2,343 universities across 12 ranking metrics, built 3 interactive Tableau dashboards, and delivered an executive summary on the strongest predictors of global rankings.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Research output was the single strongest ranking predictor — outweighing international student percentage, which had weak correlation. Prioritize research investment over diversity metrics to climb rankings.</p>
+        <p>Research quality was the strongest ranking predictor, while international student share was only weakly correlated with rank. Universities aiming to climb should prioritize research output over diversity metrics.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Focused the executive summary on 2 key metrics rather than all 12 — presenting everything would dilute the actionable signal and overwhelm a non-technical audience.</p>
+        <p>Paired interactive dashboards with a short executive summary, so stakeholders get the headline finding first and can explore the full 12-metric detail only if they need it.</p>
       </div>
-      <div class="project-tags"><span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Pandas</span></div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Tableau</span></div>
     </div>
 
     <div class="project-card" data-category="database marketing">
       <div class="project-domain">Database · Marketing Analytics</div>
-      <div class="project-title">InfluenceTrack — Campaign Operations Database</div>
-      <div class="project-desc">Designed a normalized relational database for end-to-end influencer campaign tracking — replacing spreadsheet-based workflows.</div>
+      <div class="project-title">InfluenceTrack — Influencer Marketing Database</div>
+      <div class="project-team">Team project with Purvi Sharma and Felix-Nadine Herweg</div>
+      <div class="project-desc">Designed a normalized relational database covering brands, campaigns, influencers, posts, metrics, conversions, and payouts, replacing spreadsheet-based campaign tracking.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Spreadsheet tracking made cross-campaign ROI comparison impossible. A normalized schema with a dedicated conversions table unlocked payout-to-outcome analysis that simply didn't exist before.</p>
+        <p>Moving influencer tracking from spreadsheets to a relational schema makes end-to-end campaign ROI measurable, turning gut-feel campaign and payout decisions into quantifiable ones.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Chose full normalization over a flat denormalized table — accepting slightly more complex queries in exchange for data integrity and flexibility to add new campaign types.</p>
+        <p>Chose full normalization over a flat table, accepting more complex queries in exchange for data integrity and the flexibility to add new campaign types.</p>
       </div>
       <div class="project-tags"><span class="tag">SQL</span><span class="tag">Oracle APEX</span><span class="tag">ERD Modeling</span></div>
     </div>
@@ -460,15 +503,15 @@
     <div class="project-card" data-category="marketing">
       <div class="project-domain">Customer Analytics · Retention</div>
       <div class="project-title">Streaming Service Churn — Survival Analysis</div>
-      <div class="project-desc">Modeled customer churn using Cox Proportional Hazards and Kaplan-Meier survival analysis to identify key retention drivers.</div>
+      <div class="project-desc">Modeled subscriber churn with Kaplan-Meier curves and Cox Proportional Hazards, comparing users past a 1,000-hour engagement milestone with promotion-driven users.</div>
       <hr class="project-divider"/>
       <div class="project-insight">
         <div class="project-insight-label">🎯 Key Insight</div>
-        <p>Churn risk peaked in the first 3 months — meaning onboarding and early engagement are the highest-leverage interventions, not win-back campaigns targeting long-tenured churners.</p>
+        <p>Customers past 1,000 hours of engagement were retained significantly longer (log-rank confirmed), while promotions showed a near-zero long-term retention effect. Discounts attract but don't retain; building engagement habits early does.</p>
       </div>
       <div class="project-tradeoff">
         <div class="project-tradeoff-label">⚖️ Analytical Trade-off</div>
-        <p>Chose survival analysis over logistic regression — survival models handle time-to-event data and censoring naturally, which logistic regression ignores, leading to biased retention estimates.</p>
+        <p>Chose survival analysis over logistic regression, because survival models handle time-to-event data and still-active (censored) customers naturally, where a yes/no churn model would bias retention estimates.</p>
       </div>
       <div class="project-tags"><span class="tag">R</span><span class="tag">survival</span><span class="tag">Cox PH</span><span class="tag">Kaplan-Meier</span></div>
     </div>
@@ -479,17 +522,17 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Technical Toolkit</div>
-  <h2 class="section-title">Skills & Technologies</h2>
-  <p class="section-subtitle">From raw data to production-ready insights.</p>
+  <h2 class="section-title">Skills &amp; Technologies</h2>
+  <p class="section-subtitle">From raw data to decision-ready insights.</p>
   <div class="skills-grid">
-    <div class="skill-category"><div class="skill-cat-title">Languages & Querying</div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">R</span><span class="skill-pill">SQL</span><span class="skill-pill">Java</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Machine Learning & Analytics</div><div class="skill-pills"><span class="skill-pill">XGBoost</span><span class="skill-pill">Logistic Regression</span><span class="skill-pill">Decision Trees</span><span class="skill-pill">k-means Clustering</span><span class="skill-pill">Survival Analysis</span><span class="skill-pill">OLS Regression</span><span class="skill-pill">Feature Engineering</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Languages &amp; Querying</div><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">R</span><span class="skill-pill">SQL</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Modeling &amp; Analytics</div><div class="skill-pills"><span class="skill-pill">Difference-in-Differences</span><span class="skill-pill">XGBoost</span><span class="skill-pill">Logistic Regression</span><span class="skill-pill">OLS Regression</span><span class="skill-pill">Survival Analysis</span><span class="skill-pill">k-means Clustering</span><span class="skill-pill">Association Rule Mining</span><span class="skill-pill">Feature Engineering</span></div></div>
     <div class="skill-category"><div class="skill-cat-title">NLP</div><div class="skill-pills"><span class="skill-pill">LDA Topic Modeling</span><span class="skill-pill">AFINN</span><span class="skill-pill">NRC Emotion Lexicon</span><span class="skill-pill">Loughran-McDonald</span><span class="skill-pill">tidytext</span><span class="skill-pill">VADER</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Visualization & BI</div><div class="skill-pills"><span class="skill-pill">Tableau</span><span class="skill-pill">Power BI</span><span class="skill-pill">ggplot2</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Seaborn</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Python Libraries</div><div class="skill-pills"><span class="skill-pill">Pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Scikit-learn</span><span class="skill-pill">BeautifulSoup</span><span class="skill-pill">Selenium</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Cloud & Platforms</div><div class="skill-pills"><span class="skill-pill">AWS S3</span><span class="skill-pill">AWS EC2</span><span class="skill-pill">AWS Lambda</span><span class="skill-pill">GitHub</span><span class="skill-pill">JIRA</span><span class="skill-pill">Oracle APEX</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Practices</div><div class="skill-pills"><span class="skill-pill">ETL Pipelines</span><span class="skill-pill">Data Cleaning</span><span class="skill-pill">Statistical Modeling</span><span class="skill-pill">Agile / Scrum</span><span class="skill-pill">ERD Design</span></div></div>
-    <div class="skill-category"><div class="skill-cat-title">Tools</div><div class="skill-pills"><span class="skill-pill">Advanced Excel</span><span class="skill-pill">Jupyter Notebook</span><span class="skill-pill">R Markdown</span><span class="skill-pill">Microsoft Office</span><span class="skill-pill">SharePoint</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Visualization &amp; BI</div><div class="skill-pills"><span class="skill-pill">Tableau</span><span class="skill-pill">Power BI</span><span class="skill-pill">Google Analytics</span><span class="skill-pill">ggplot2</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Seaborn</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Python Libraries</div><div class="skill-pills"><span class="skill-pill">pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Scikit-learn</span><span class="skill-pill">Selenium</span><span class="skill-pill">BeautifulSoup</span><span class="skill-pill">python-docx</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Platforms &amp; Automation</div><div class="skill-pills"><span class="skill-pill">SharePoint</span><span class="skill-pill">Power Automate</span><span class="skill-pill">Power Apps</span><span class="skill-pill">AWS S3</span><span class="skill-pill">AWS EC2</span><span class="skill-pill">AWS Lambda</span><span class="skill-pill">GitHub</span><span class="skill-pill">Oracle APEX</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Practices</div><div class="skill-pills"><span class="skill-pill">Data Pipelines</span><span class="skill-pill">Data Cleaning</span><span class="skill-pill">Workflow Automation</span><span class="skill-pill">ERD Design</span><span class="skill-pill">Agile / Scrum</span><span class="skill-pill">JIRA</span></div></div>
+    <div class="skill-category"><div class="skill-cat-title">Tools</div><div class="skill-pills"><span class="skill-pill">Advanced Excel (pivot tables, index/match, VBA)</span><span class="skill-pill">Jupyter Notebook</span><span class="skill-pill">R Markdown</span><span class="skill-pill">Microsoft Office</span></div></div>
   </div>
 </section>
 
@@ -499,9 +542,10 @@
   <h2 class="section-title">Certifications</h2>
   <p class="section-subtitle">Structured learning beyond the classroom.</p>
   <div class="certs-grid">
-    <div class="cert-card"><div class="cert-icon">🐍</div><div class="cert-body"><div class="cert-title">Python for Everybody Specialization</div><div class="cert-issuer">University of Michigan · Coursera</div><div class="cert-courses">Python Basics · Data Structures · Web Data Access · Databases with Python · Data Retrieval & Visualization</div></div></div>
-    <div class="cert-card"><div class="cert-icon">📊</div><div class="cert-body"><div class="cert-title">Data Science: Foundations using R</div><div class="cert-issuer">Johns Hopkins University · Coursera</div><div class="cert-courses">R Programming · Getting & Cleaning Data · Exploratory Data Analysis</div></div></div>
-    <div class="cert-card"><div class="cert-icon">💹</div><div class="cert-body"><div class="cert-title">Finance & Quantitative Modeling for Analysts</div><div class="cert-issuer">University of Pennsylvania · Coursera</div><div class="cert-courses">Quantitative Modeling · Spreadsheet Modeling · Financial Acumen · Corporate Finance</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🧩</div><div class="cert-body"><div class="cert-title">McKinsey Forward Program</div><div class="cert-issuer">McKinsey &amp; Company</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🐍</div><div class="cert-body"><div class="cert-title">Python for Everybody Specialization</div><div class="cert-issuer">University of Michigan · Coursera</div><div class="cert-courses">Python Basics · Data Structures · Web Data Access · Databases with Python · Data Retrieval &amp; Visualization</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📊</div><div class="cert-body"><div class="cert-title">Data Science: Foundations using R</div><div class="cert-issuer">Johns Hopkins University · Coursera</div><div class="cert-courses">R Programming · Getting &amp; Cleaning Data · Exploratory Data Analysis</div></div></div>
+    <div class="cert-card"><div class="cert-icon">💹</div><div class="cert-body"><div class="cert-title">Finance &amp; Quantitative Modeling for Analysts</div><div class="cert-issuer">University of Pennsylvania · Coursera</div><div class="cert-courses">Quantitative Modeling · Spreadsheet Modeling · Financial Acumen · Corporate Finance</div></div></div>
   </div>
 </section>
 
@@ -510,8 +554,8 @@
   <div class="section-label">Education</div>
   <h2 class="section-title">Academic Background</h2>
   <div class="edu-grid">
-    <div class="edu-card"><div class="edu-school">Rochester Institute of Technology</div><div class="edu-degree">M.S. Business Analytics</div><div class="edu-meta">Rochester, NY · Aug 2024 – May 2026</div><div class="edu-gpa">GPA 3.67 / 4.0</div><div class="edu-courses">Advanced Business Analytics · Marketing Analytics · Financial Analytics · BI & Data Visualization · Database Management</div></div>
-    <div class="edu-card"><div class="edu-school">University of Mumbai</div><div class="edu-degree">B.E. Electronics & Telecommunication</div><div class="edu-meta">Mumbai, India · Aug 2018 – Jul 2022</div><div class="edu-gpa">GPA 3.4 / 4.0</div><div class="edu-courses">Statistical Modelling · Big Data · Database Management · Project Management</div></div>
+    <div class="edu-card"><div class="edu-school">Rochester Institute of Technology</div><div class="edu-degree">M.S. Business Analytics, Saunders College of Business (AACSB Accredited)</div><div class="edu-meta">Rochester, NY · Aug 2024 – Dec 2026</div><div class="edu-gpa">GPA 3.67/4.00</div><div class="edu-courses">Advanced Business Analytics · Data Management · Financial Analytics · Marketing Analytics</div></div>
+    <div class="edu-card"><div class="edu-school">University of Mumbai</div><div class="edu-degree">B.E. Electronics &amp; Telecommunication</div><div class="edu-meta">Mumbai, India · Aug 2018 – Jul 2022</div><div class="edu-gpa">GPA 3.40/4.00</div><div class="edu-courses">Database Management Systems · Big Data Analytics · Project Management</div></div>
   </div>
 </section>
 
@@ -520,13 +564,13 @@
   <div class="contact-inner">
     <div class="section-label">Let's Connect</div>
     <h2 class="section-title">Get in Touch</h2>
-    <p style="color:var(--muted);margin-bottom:0.5rem;">Open to full-time roles and internships in data analytics, business intelligence, and data science.</p>
-    <p style="color:var(--muted);font-size:0.86rem;">F-1 · OPT / CPT Eligible · Based in Rochester, NY</p>
+    <p style="color:var(--muted);margin-bottom:0.5rem;">Open to full-time roles in data analytics, business analysis, and business intelligence starting January 2027.</p>
+    <p style="color:var(--muted);font-size:0.86rem;">F-1 · OPT Eligible · Based in Rochester, NY · Open to remote, hybrid, and relocation</p>
     <div class="contact-links">
       <a href="mailto:shrusti.suvarna156@gmail.com" class="contact-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email Me
       </a>
-      <a href="https://linkedin.com/in/shrustisuvarna" target="_blank" class="contact-link">
+      <a href="https://www.linkedin.com/in/shrustisuvarna/" target="_blank" rel="noopener" class="contact-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
       </a>
       <a href="tel:+15855761257" class="contact-link">
